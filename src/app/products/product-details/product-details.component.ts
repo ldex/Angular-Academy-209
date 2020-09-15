@@ -27,7 +27,7 @@ export class ProductDetailsComponent implements OnInit {
       .subscribe(
         () => {
           console.log("Product deleted!");
-          this.productService.initProduct();
+          this.productService.clearList();
           this.router.navigateByUrl("/products");
         },
         error => console.log("Could not delete product! " + error)

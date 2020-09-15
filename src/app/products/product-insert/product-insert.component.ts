@@ -32,7 +32,7 @@ export class ProductInsertComponent implements OnInit {
       .subscribe(
         product => {
           console.log("New product saved! " + product.id);
-          this.productService.initProduct();
+          this.productService.clearList();
           this.router.navigateByUrl("/products");
         },
         error => console.log("Could not save product! " + error)
